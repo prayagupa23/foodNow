@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Food Waste Reduction Platform - Connect restaurants, NGOs, and users to reduce food waste and help those in need">
+    <meta name="keywords" content="food waste, donation, restaurant, NGO, sustainability">
+    <title>Food Waste Reduction Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="page" id="login-page">
+        <div class="login-container">
+            <h1>Food Waste Reduction Platform</h1>
+            <div class="role-selection">
+                <button class="role-btn active">Restaurant</button>
+                <button class="role-btn">NGO</button>
+                <button class="role-btn">User</button>
+            </div>
+            <form class="login-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="primary-btn">Login</button>
+                <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Restaurant Dashboard -->
+    <div class="page" id="restaurant-dashboard">
+        <nav class="sidebar">
+            <div class="logo">FoodWaste</div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-hand-holding-heart"></i> Donations</li>
+                <li><i class="fas fa-trophy"></i> Ranking</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h2>Restaurant Dashboard</h2>
+                <button class="primary-btn"><i class="fas fa-plus"></i> Request Donation</button>
+            </header>
+            <div class="dashboard-grid">
+                <div class="ranking-box">
+                    <h3>Your Ranking</h3>
+                    <div class="rank-number">#3</div>
+                    <p>in donations!</p>
+                </div>
+                <div class="leaderboard">
+                    <h3>Top Donating Restaurants</h3>
+                    <ul>
+                        <li>1. Green Restaurant <span>120 points</span></li>
+                        <li>2. Fresh Foods <span>100 points</span></li>
+                        <li>3. Your Restaurant <span>90 points</span></li>
+                        <li>4. Healthy Bites <span>85 points</span></li>
+                        <li>5. Organic Kitchen <span>80 points</span></li>
+                    </ul>
+                </div>
+                <div class="donation-status">
+                    <h3>Donation Status</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>NGO</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-03-20</td>
+                                <td>Food Bank</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><button class="action-btn">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-03-19</td>
+                                <td>Hunger Relief</td>
+                                <td><span class="status accepted">Accepted</span></td>
+                                <td><button class="action-btn">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-03-18</td>
+                                <td>Community Kitchen</td>
+                                <td><span class="status verified">Verified</span></td>
+                                <td><button class="action-btn">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- NGO Dashboard -->
+    <div class="page" id="ngo-dashboard">
+        <nav class="sidebar">
+            <div class="logo">FoodWaste</div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-hand-holding-heart"></i> Donations</li>
+                <li><i class="fas fa-check-circle"></i> Verification</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h2>NGO Dashboard</h2>
+            </header>
+            <div class="dashboard-grid">
+                <div class="donation-requests">
+                    <h3>New Donation Requests</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Restaurant</th>
+                                <th>Food Type</th>
+                                <th>Quantity</th>
+                                <th>Pickup Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Green Restaurant</td>
+                                <td>Prepared Meals</td>
+                                <td>50 portions</td>
+                                <td>2:00 PM</td>
+                                <td>
+                                    <button class="accept-btn">Accept</button>
+                                    <button class="reject-btn">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="accepted-donations">
+                    <h3>Accepted Donations</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Restaurant</th>
+                                <th>Food Type</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fresh Foods</td>
+                                <td>Bread & Pastries</td>
+                                <td>Pending Pickup</td>
+                                <td><button class="mark-received-btn">Mark as Received</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- User Dashboard -->
+    <div class="page" id="user-dashboard">
+        <nav class="sidebar">
+            <div class="logo">FoodWaste</div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-hand-holding-heart"></i> My Donations</li>
+                <li><i class="fas fa-gift"></i> Rewards</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h2>User Dashboard</h2>
+                <button class="primary-btn"><i class="fas fa-plus"></i> Donate Food</button>
+            </header>
+            <div class="dashboard-grid">
+                <div class="rewards-section">
+                    <h3>Your Rewards</h3>
+                    <div class="coupons-grid">
+                        <div class="coupon-card">
+                            <div class="coupon-value">$5 OFF</div>
+                            <div class="coupon-details">
+                                <p>Valid at Green Restaurant</p>
+                                <p>Expires: 2024-04-20</p>
+                            </div>
+                        </div>
+                        <div class="coupon-card">
+                            <div class="coupon-value">$3 OFF</div>
+                            <div class="coupon-details">
+                                <p>Valid at Fresh Foods</p>
+                                <p>Expires: 2024-04-15</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="redeem-btn">Redeem Coupons</button>
+                </div>
+                <div class="donation-status">
+                    <h3>My Donations</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Food Type</th>
+                                <th>Status</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-03-20</td>
+                                <td>Prepared Meals</td>
+                                <td><span class="status verified">Verified</span></td>
+                                <td>+10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="restaurant-leaderboard">
+                    <h3>Top Restaurants Fighting Food Waste!</h3>
+                    <ul>
+                        <li>
+                            <span class="rank">1</span>
+                            <span class="name">Green Restaurant</span>
+                            <button class="order-btn">Order</button>
+                        </li>
+                        <li>
+                            <span class="rank">2</span>
+                            <span class="name">Fresh Foods</span>
+                            <button class="order-btn">Order</button>
+                        </li>
+                        <li>
+                            <span class="rank">3</span>
+                            <span class="name">Healthy Bites</span>
+                            <button class="order-btn">Order</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="page" id="admin-panel">
+        <nav class="sidebar">
+            <div class="logo">FoodWaste</div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-shield-alt"></i> Verification</li>
+                <li><i class="fas fa-chart-line"></i> Analytics</li>
+                <li><i class="fas fa-users"></i> Users</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <h2>Admin Panel</h2>
+            </header>
+            <div class="dashboard-grid">
+                <div class="verification-section">
+                    <h3>NGO Reports Verification</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NGO</th>
+                                <th>Report Date</th>
+                                <th>Donation Details</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Food Bank</td>
+                                <td>2024-03-20</td>
+                                <td>50 meals from Green Restaurant</td>
+                                <td>
+                                    <button class="verify-btn">Verify</button>
+                                    <button class="reject-btn">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="analytics-section">
+                    <h3>Top Donors</h3>
+                    <div class="chart-container">
+                        <!-- Chart placeholder -->
+                        <div class="chart-placeholder"></div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Restaurant</th>
+                                <th>Total Donations</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Green Restaurant</td>
+                                <td>150</td>
+                                <td>1200</td>
+                            </tr>
+                            <tr>
+                                <td>Fresh Foods</td>
+                                <td>120</td>
+                                <td>1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
